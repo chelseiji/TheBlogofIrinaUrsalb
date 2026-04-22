@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Summer – Copii Sub Soare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<div class="main">
+    
+    <div class="back-btn" id="backBtn">
+        <img src="../redbutton.svg" alt="exit archive">
+    </div>
+
+    <div class="blog-container">
+         <!-- holds the image  -->
+        <div class="left-panel">
+            <img src="../images/B2I1.png" class="main-image" id="mainImage">
+             <!-- first caption -->
+            <div class="caption-bg"></div>
+            <div class="caption-text" id="captionText">view on the way to Gaura, the gates to keep us warm</div>
+            
+            <div class="toggle">
+                <div class="dot" id="leftDot"></div>
+                <div class="dot" id="rightDot"></div>
+            </div>
+        </div>
+         <!-- right panel info -->
+        <div class="right-panel">
+            <div class="title">False Summer</div>
+            <div class="date">14 - 06 - 10 P.F</div>
+            <div class="number">28369067813</div>
+            <div class="text-box">
+                <div class="text">
+                    It is summer in Zimnygrad.<br><br>
+                    Saying that sounds like some kind of sick joke. Outside, the great storm never ends. I can hear the muffled wind through the glass walkways from my Bloc to my subteren on the way to work. Yet inside my Bloc, the climate panels of the wall exert a "warm" breeze, and for three months the harsh white lights soften to a honey colored glow. They simulate a season that no longer exists.<br><br>
+                    When I was very young, before the Freeze, it was still relatively cold, never going above -1 C even on a summer's day. Once a year, however, as a reward for his hard work, my father would be given a week in Vara. This was a biodome made of glass, designed to replicate a part of the planet that no longer existed. There was sand and an artificial beach. I lived by the coast as a child, a time when the water wasn't frozen yet, but here the water was a perfect warmth. It felt like a hot bath on my skin. The rich had homes near the dorm and could visit whenever they pleased, but to the rest of us, it was a gift.<br><br>
+                    The biodomes all collapsed after the Freeze, traditional glass wasn't enough for the winds. Now the powerful no longer go to summer, summer comes to them.<br><br>
+                    I live in the summer at the moment. My apartment smells faintly of "cut grass" and "ocean breeze." I cannot even begin to fathom how expensive these pods are, but they get sent for free as a benefit of living in Bloc 3. Viktor's higher-ups in Bloc 2 even have trees within their apartments growing fresh fruit during this season. To pass the time on my days off, I go down to the pool on the 10th floor, swimming in the recycled water, lit to be an artificial blue.<br><br>
+                    ——<br><br>
+                    Yesterday, Viktor took me to Sector 4. A dinner in Gaura, a petrol crystal mining town on the verge of total ruin. I'm not there for dinner, but for a broadcast to promote the growth of the town. The reality is that it's a cemetery disguised as a booming village.<br><br>
+                    The people in the town stand in line daily for their government-issued nutritional grain packs, a brown substance that supposedly tastes something like dust, according to notes I've seen from other sisters. Looking around, you may not notice at first, but there is a glimmer in the air, and when you look at the people, a fine, teal powder coats their clothing. They call it PD, also known as petrol dust. It's beautiful, but it's killing them.<br><br>
+                    The town is a hub for extracting petrol crystals. Most families here work as engineers fixing the numerous technodrills that dig into the underground crystal walls. The byproduct of this is the Gaura cough, you hear everywhere, a guttural, wet rasp, sounding like a man trying to cough out cut glass from his lungs. It's because the petrol crystals are actively crystallizing in their lungs. The fine dust in the air is absorbed in the lungs, causing them to expand until the entire lung becomes crystallized. One would not wish this on their worst enemy, but for me, I wish for something even more painful to happen to the dictator.<br><br>
+                    Viktor and I are put into a room with a large glass wall. The cameras carefully avoid the ever-falling haze of teal dust falling outside. His speech is a perfect work of fiction. He promises filtration and guarantees of care, all while denying any neglect of the government. His words are so blatantly false that it feels like a test of faith, but his smile is the selling point. He has the smile of a kind man, one hard to find in this cold world, and it is utterly convincing. I think this was the first time I realized Viktor's true power, he could make you believe that poison was a form of progress and that a cough was simply the sound of hard work.<br><br>
+                    I stood by him smiling, the picture of a perfect Zimnygrad wife. As the video came to its end, I looked out of the glass room and watched the people looking at us. The look in their eyes was the same as my own, exhaustion. We were both being used as transactions.<br><br>
+                    For your records:<br><br>
+                    File one: Zimnygrad only has 10 active train lines within the city perimeter. Cross-referencing logs from PF (pre-freeze), there are 5 additional, unaccounted-for lines. These appear to be tunnels from the old magnetized metro system, sealed and omitted from official public records. Looking at the image of the unaccounted tracks, it appears they may still be in use, but for what and by whom.<br><br>
+                    File two: Information on the disease in Gaura: Part of a diary written by a physician suffering from the illness.<br><br>
+                    The crystallization of the lungs is a slow, painful process. With each cough, more and more escape from the lungs, cutting the throat but releasing more moisture to continue growth. There is no cure. The only solution is the prevention of long-term exposure to the mining area. Continuing mining is to give yourself a dose of a painful death knowingly. Our ethical recommendation is to cease all human-led operations. - Dr. Grunitzky<br><br>
+                    Note: Recommendation rejected. The project is now concluded. All data should be incinerated, and all staff members must report to mandatory meetings with the Dictator. Please send our regards to the families.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+// Java file
+let showingFirst = true;
+
+const mainImage = document.getElementById('mainImage');
+const captionText = document.getElementById('captionText');
+const leftDot = document.getElementById('leftDot');
+const rightDot = document.getElementById('rightDot');
+
+
+//update based on the images and text
+function updateDisplay() {
+    if (showingFirst) {
+        mainImage.src = '../images/B2I1.png';
+        captionText.innerText = 'view on the way to Gaura, the gates to keep us warm';
+        leftDot.style.background = '#861657';
+        rightDot.style.background = 'white';
+    } else {
+        mainImage.src = '../images/B2I2.png';
+        captionText.innerText = 'the first director watches the miners closely';
+        rightDot.style.background = '#861657';
+        leftDot.style.background = 'white';
+    }
+}
+
+leftDot.addEventListener('click', function() {
+    if (!showingFirst) {
+        showingFirst = true;
+        updateDisplay();
+    }
+});
+
+rightDot.addEventListener('click', function() {
+    if (showingFirst) {
+        showingFirst = false;
+        updateDisplay();
+    }
+});
+
+document.getElementById('backBtn').addEventListener('click', function() {
+    window.location.href = '../homepage.html';
+});
+
+updateDisplay();
+</script>
+
+</body>
+</html>

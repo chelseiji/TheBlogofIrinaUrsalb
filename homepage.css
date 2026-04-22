@@ -1,0 +1,678 @@
+/* Remove white border around the entire page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.homepage {
+    width: 100%;
+    height: 4085px;
+    position: relative;
+    background-color: #000;
+    overflow-x: hidden;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+    font-family: 'Jersey 15', cursive;
+}
+
+
+/* background at the top*/
+.mask-group {
+    width: 100%;
+    height: 965px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* overlay over the background image*/
+.dark-overlay {
+    width: 100%;
+    height: 965px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* gradient */
+.ombre {
+    width: 100%;
+    height: 752px;
+    position: absolute;
+    top: 395px;
+    left: 0;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #000 75.96%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* Star image  */
+.star-image {
+    position: absolute;
+    top: -320px;
+    left: -255px;
+    width: 1615px;
+    height: 1447px;
+    object-fit: contain;
+    transform: rotate(48.31deg);
+    transition: opacity 0.3s ease;
+}
+
+/* star no glow*/
+.star-normal {
+    opacity: 1;
+}
+
+/* hover star */
+.star-hover {
+    opacity: 0;
+}
+
+/* on hover, hide normal star, show hover star */
+.star-container:hover .star-normal {
+    opacity: 0;
+}
+
+.star-container:hover .star-hover {
+    opacity: 1;
+}
+
+/* prayer on star */
+   .star-text {
+    position: absolute;
+    top: 187px;
+    left: 134px;     
+    width: 744px;
+    height: 490px;
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    pointer-events: none;
+    z-index: 6;
+}
+
+.text-line-top {
+    position: absolute;
+    top: 0;
+    left: 118px;
+    width: 559px;
+}
+
+.text-line-bottom {
+    position: absolute;
+    top: 190px;
+    left: 8px;
+    width: 744px;
+}
+
+.sister-logo {
+    position: absolute;
+    top: 170px;
+    right: 78px;
+    width: auto;
+    height: auto;
+    z-index: 7;
+}
+
+.sister-logo-image {
+    width: 100%;
+    height: 570.8px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+/* the purple poving video behind the duments */
+.video-container {
+    position: absolute;
+    top: 1512px;  
+    left: 0;
+    width: 100%;
+    height: 169px;
+    z-index: 6; /* https://www.codecademy.com/resources/docs/css/transform-functions/rotateZ */
+}
+
+.moving-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.purple-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #861657;
+    opacity: 0.78;
+    z-index: 2; /* has to do it it goes above or below the video and the document*/
+    pointer-events: none; 
+}
+
+/* the document that is under the star*/
+   .official-document {
+    position: absolute;
+    top: 963px;
+    left: 73px;
+    width: 613px;
+    height: 867px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 7;
+    transition: transform 0.2s;
+}
+
+.official-document:hover {
+    transform: scale(1.02);
+}
+
+/* overlay that opens when the document is clicked */
+.document-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(134, 22, 87, 0.47);
+}
+
+/* the size of the image gets a bit bigger when the document is pressed */
+.overlay-document {
+    position: relative;
+    width: 694px;
+    height: 982px;
+    object-fit: cover;
+    z-index: 1001;
+}
+
+/* closes the overlay when the user presses the teal star */
+.close-star {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 120px;
+    height: 132px;
+    cursor: pointer;
+    z-index: 1002;
+    transition: transform 0.2s;
+}
+
+.close-star:hover {
+    transform: scale(0.95);
+}
+
+.black-cross {
+    position: absolute;
+    top: 1388px;  
+    left: 771px;  
+    width: 85px;
+    height: 127px;
+    z-index: 8;
+    object-fit: contain;
+    cursor: default;
+}
+
+.black-cross-medium {
+    position: absolute;
+    top: 1230px;  
+    left: 790px;  
+    width: 192px;
+    height: 290px;
+    object-fit: contain;
+    z-index: 8;
+    cursor: default;
+    
+}
+
+/* teal cross that opens audio */
+   .teal-cross {
+    position: absolute;
+    top: 1038px;  
+    left: 890px;  
+    width: 220px;
+    height: 476px;
+    object-fit: cover;  
+    z-index: 8;
+    cursor: pointer;
+    
+}
+
+.teal-cross-small {
+    position: absolute;
+    top: 1345px;
+    left: 1075px;
+    width: 96px;
+    height: 169px;
+    object-fit: fill;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.black-cross-small {
+    position: absolute;
+    top: 1386px;
+    left: 1165px;  
+    width: 85px;
+    height: 127px;
+    object-fit: cover;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.teal-cross-medium {
+    position: absolute;
+    top: 1284px;
+    left: 1214px;  
+    width: 134px;
+    height: 230px;
+    object-fit: fill;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.black-cross-tall {
+    position: absolute;
+    top: 1038px;
+    left: 1329px;  
+    width: 219px;
+    height: 476px;
+    object-fit: cover;  
+    z-index: 8;
+    cursor: pointer;
+}
+
+.teal-cross-right {
+    position: absolute;
+    top: 1223px;
+    right: -20px;
+    width: 192px;
+    height: 290px;
+    object-fit: fill;
+    z-index: 8;
+    pointer-events: none;
+}
+
+/* Blog 1 */
+
+.blog1-button {
+    position: absolute;
+    top: 1758px;
+    right: 132px;
+    width: 406px;
+    height: 261px;
+    object-fit: fill;
+    cursor: pointer;
+    z-index: 8;
+}
+
+
+/* Blog 2 */
+
+.blog2-button {
+    position: absolute;
+    top: 1999px;
+    left: 500px;
+    width: 394px;
+    height: 259px;
+    cursor: pointer;
+    z-index: 8;
+}
+
+
+/* having issues with the size of this */
+.blog2-button:hover {
+    width: 443px;
+    height: 337px;
+    top: 1871px;    
+    left: 500px;    
+}
+
+/* Blog 3 */
+.blog3-button {
+    position: absolute;
+    top: 2154px;  
+    left: 102px;  
+    width: 308px;
+    height: 212px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 8;
+    transition: transform 0.2s;
+}
+
+
+
+/* Blog 4 */
+.blog4-number {
+    position: absolute;
+    top: 2530px;  
+    left: 120px;
+    font-size: 32px;
+    font-family: 'Jersey 15', cursive;
+    color: #fff;
+    z-index: 8;
+    text-align: center;
+    width: 599px;  
+}
+
+.blog4-button {
+    position: absolute;
+    top: 2525px;
+    left: 264px;
+    width: 599px;
+    height: 455px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 8;
+}
+
+/* Blog 5 */
+.blog5-number {
+    position: absolute;
+    top: 2339px;  
+    right: 400px;
+    font-size: 32px;
+    font-family: 'Jersey 15', cursive;
+    color: #fff;
+    z-index: 9;
+    text-align: center;
+    width: 599px;  
+}
+
+.blog5-video {
+    position: absolute;
+    top: 2340px;
+    right: 240px;
+    width: 500px;
+    height: 310px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 8;
+}
+
+/* Blog 6 */
+
+.blog6-number {
+    position: absolute;
+    top: 3100px;  
+    right: 84px;
+    font-size: 32px;
+    font-family: 'Jersey 15', cursive;
+    color: #fff;
+    z-index: 8;
+    text-align: center;
+    width: 599px;  
+}
+
+.blog6-button {
+    position: absolute;
+    top: 2999px;
+    right: 84px;
+    width: 402px;
+    height: 129px;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 8;
+    transition: all 0.2s ease;
+}
+
+.blog6-button:hover {
+    transform: scale(1.05);
+}
+
+/* Blog 7 */
+
+.blog7-number {
+    position: absolute;
+    top: 3290px;  
+    right: 15px;
+    font-size: 32px;
+    font-family: 'Jersey 15', cursive;
+    color: #fff;
+    z-index: 12;
+    text-align: center;
+    width: 599px;  
+}
+
+
+.blog7-button {
+    position: absolute;
+    top: 3313px;
+    right: 200px;
+    width: 456px;
+    height: 149px;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.blog7-button:hover {
+    width: 456px;
+    height: 296px;
+    right: 200px; 
+    z-index: 11;
+    
+
+}
+
+/* Blog 8 */
+
+.blog8-number {
+    position: absolute;
+    top: 3200px;  
+    left: 115px;
+    font-size: 32px;
+    font-family: 'Jersey 15', cursive;
+    color: #fff;
+    z-index: 12;
+    text-align: center;
+    width: 599px;  
+}
+
+
+.blog8-button {
+    position: absolute;
+    bottom: 612px;
+    left: 56px;
+    width: 356px;
+    height: 277px;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 8;
+}
+
+/* Blog 9 */
+
+.blog9-button {
+    position: absolute;
+    top: 3462px;           
+    left: 50%;
+    transform: translateX(-50%);
+    width: 733px;
+    height: 623px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 6;
+}
+
+/* overlay */
+.overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(134, 22, 87, 0.47);
+}
+
+.blog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-black-box {
+    position: relative;
+    width: 1189px;
+    height: 716px;
+    background-color: #000;
+    z-index: 1001;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.blog-prompt-text {
+    width: 861px;              
+    font-size: 48px;
+    font-family: 'Jersey 15', cursive;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+
+    margin-bottom: 24px;       
+}
+
+.password-input-box {
+    width: 489px;
+    height: 54px;
+    background-color: white;
+    border: none;
+
+    font-size: 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+}
+
+.red-submit-btn {
+    width: 184px;
+    height: 201px;
+    cursor: pointer;
+
+    margin-top: 24px; 
+}
+
+.close-star {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 120px;
+    height: 132px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.code-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-image {
+    position: relative;
+    width: 1228px;
+    height: 782px;
+    object-fit: contain;
+    z-index: 1001;
+}
+
+
+/* audio used this reddit: https://www.reddit.com/r/webdev/comments/179wwcj/how_to_highlight_a_part_of_the_audio_player_bar/ */
+.audio-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-container {
+    position: relative;
+    background-color: #000;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 1001;
+    min-width: 400px;
+    text-align: center;
+}
+
+.audio-container audio {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* info about the lines */
+
+
+.connection-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 7;
+}
+
+.connection-line line {
+    stroke: white;
+    stroke-width: 1px;
+}
+

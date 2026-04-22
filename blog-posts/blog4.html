@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Summer – Copii Sub Soare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<div class="main">
+    
+    <div class="back-btn" id="backBtn">
+        <img src="../redbutton.svg" alt="exit archive">
+    </div>
+
+    <div class="blog-container">
+         <!-- holds the image  -->
+        <div class="left-panel">
+            <img src="../images/B4I1.png" class="main-image" id="mainImage">
+             <!-- first caption -->
+            <div class="caption-bg"></div>
+            <div class="caption-text" id="captionText">Corina even has a fungi atrium, I never want to leave</div>
+            
+            <div class="toggle">
+                <div class="dot" id="leftDot"></div>
+                <div class="dot" id="rightDot"></div>
+            </div>
+        </div>
+         <!-- right panel info -->
+        <div class="right-panel">
+            <div class="title">Answered Prayers</div>
+            <div class="date">24 - 11 - 10 P.F</div>
+            <div class="number">29384950428</div>
+            <div class="text-box">
+                <div class="text">
+                    Zimnygrad is in deep winter.<br><br> The sun has not come up for over a month, and dark clouds engulf the sky. The city lights are perpetually on, shining light on the snow that has now reached up to the 10th floor of my Bloc. Luckily, I live on the 23rd and am still able to see a little bit outside. Before the end of the year, I have been rewarded with a small break, a break during what would once be considered a "holiday" season. Nothing more than the past now, there are no holidays in this regime.<br><br>
+                    During my break, I have spent most of my time lying in bed while Viktor is at work. It's boring to be home without him. I can only watch the shows I like for around 4 hours a day, other than that, I have to keep myself entertained in different ways. The 24th was the beginning of his break as well. I feel comfortable being able to wake up, and him still being next to me. How sad that he's my only comfort, and I can't even really be myself around him.<br><br>
+                    Viktor has sensed that something has been off with me lately. I can't blame him, my mind has been stuck on all of the information I have been finding at work. I tell him it's nothing and that I have just been having trouble with my insomnia again (which isn't exactly untrue). He jumps out of bed and heads toward our shared closet. He comes back with a hovering gift box and asks me to open it. It's a petrolcrystal necklace, known to keep the one wearing it completely warm from head to toe.<br><br>
+                    "I know how cold you get sitting down all day at work, even with all the heat in that place." I could cry. I kiss him. Why did he have to marry me?<br><br>
+                    ——----------<br><br>
+                    Last night I attended a dinner with the Constins. Anton Constin sits on the Internal Review Board and is Viktor's childhood friend. His wife, Corina, is what would be considered a Zimnygrad masterpiece. She's flawless, with blonde hair and a slim figure, she makes any item of clothing look like it's been tailored specifically for her. Her smile is calm but equally terrifying, even though she makes me feel quite small. There is something about her that makes me not be able to take my eyes away.<br><br>
+                    The dinner was incredibly boring. Though the food was lavish, the conversations were empty. We spoke of the various synthetic materials that we thought best kept the warmth in, and how much the flooring in their apartment cost. Corina never dropped her smile, while I planned my mental escape routes.<br><br>
+                    As the men went to drink șliboviță and talk about robotic handball teams, Corina grabbed my arm and insisted we go look at her atrium full of plants. "The air is so fresh in here, you'll love it," she said as she hooked my arm around hers.<br><br>
+                    Her private garden was the first time I had experienced anything jungle-like in person. We took off our shoes, and I could feel the sensation of grass on my feet, reminding me of my childhood. We walked through the garden, slowly taking it all in. Then Corina stopped at a plant with a dark red color, which had not yet bloomed. She began to trace a shape on the flower, it was the Copii Sub Soare symbol for network leader.<br><br>
+                    I froze.<br><br>
+                    I could not believe it, and thought she may have drawn it by mistake if that was even remotely possible. She looked up at me with a big smile and a calm voice: "The righteous shall rejoice when he seeth the vengeance: he shall wash his feet in the blood of the wicked."<br><br>
+                    This was her message, she was a sister, and she was, like me, a spy. She was a believer. Her eye contact never broke, and she kept that same smile on her face. She said she saw my most recent findings had been sent out to the wider network by herself. She continued to play with the flower, from afar, it may look like she was explaining it to me in detail.<br><br>
+                    We had only a couple of minutes, so I had to give her all of the information I had so she could share it quickly. I told her that I have found more than the original document, I memorised more archives than before, including more doctored reports. And more importantly, I had been able to find all of the codes for entering the main public broadcast server.<br><br>
+                    Her smile went from sharp to utterly terrifying. "Good, I will take care of the rest." Is all she said after. We walked back to the lounge, talking of all the new fashions coming out of Zimnygrad this year. The smile on my face was finally real. We went back to our husbands, and then it was time for me to go back home.<br><br>
+                    Viktor said it looks like I had a lot of fun, and he insisted that we should invite them over as well. I couldn't agree more.<br><br>
+                    Now I am at home, Victor is asleep and peaceful, all I can think of is what is next to come. I pray to see the change soon, for all of us, my sisters.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+// Java file
+let showingFirst = true;
+
+const mainImage = document.getElementById('mainImage');
+const captionText = document.getElementById('captionText');
+const leftDot = document.getElementById('leftDot');
+const rightDot = document.getElementById('rightDot');
+
+
+//update based on the images and text
+function updateDisplay() {
+    if (showingFirst) {
+        mainImage.src = '../images/B4I1.png';
+        captionText.innerText = 'Corina even has a fungi atrium, I never want to leave';
+        leftDot.style.background = '#861657';
+        rightDot.style.background = 'white';
+    } else {
+        mainImage.src = '../images/B4I2.png';
+        captionText.innerText = 'we met for coffee in Bloc 3 and spoke of our dreams';
+        rightDot.style.background = '#861657';
+        leftDot.style.background = 'white';
+    }
+}
+
+leftDot.addEventListener('click', function() {
+    if (!showingFirst) {
+        showingFirst = true;
+        updateDisplay();
+    }
+});
+
+rightDot.addEventListener('click', function() {
+    if (showingFirst) {
+        showingFirst = false;
+        updateDisplay();
+    }
+});
+
+document.getElementById('backBtn').addEventListener('click', function() {
+    window.location.href = '../homepage.html';
+});
+
+updateDisplay();
+</script>
+
+</body>
+</html>

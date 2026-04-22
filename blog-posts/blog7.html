@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>He Knows – Copii Sub Soare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<div class="main">
+    
+    <div class="back-btn" id="backBtn">
+        <img src="../redbutton.svg" alt="exit archive">
+    </div>
+
+    <div class="blog-container">
+        
+        <div class="left-panel">
+            <!-- the gif of the ocean -->
+            <img src="../images/B7I1.gif" class="main-image" id="mainImage">
+            
+            <div class="caption-bg"></div>
+            <div class="caption-text" id="captionText">i wish i could sit by the non frozen seas from before</div>
+            
+            <div class="toggle" id="toggle">
+                <div class="dot" id="leftDot"></div>
+                <div class="dot" id="rightDot"></div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="title">He Knows</div>
+            <div class="date">04 - 06 - 11 P.F</div>
+            <div class="number">19284573859</div>
+            <div class="text-box">
+                <div class="text">
+                    It's been weeks since the tunnel. Viktor and I don't speak of it, at least, not directly. But the silence between us has changed, I feel like I don't have to put up as many walls as before.<br><br>
+                    —-<br><br>After dropping me off at home, Viktor often shuts himself in the office for hours. He's been extra busy lately. Our routine is often the same. I bring him tea. He says thank you. His fingers brush mine. He takes a sip. Burns his tongue. Kisses me anyway.<br><br>
+                    Last night was different, though, he asked me for help.<br><br>
+                    His voice was quiet and steady, the same voice he uses at work. But his eyes tell a different story, he seems tired. He has so much to do that even his memo-reciver can't keep up.<br><br>
+                    "Maybe you could help me sort all of my meetings," he told me. "I have briefs, personnel files, and security protocols, meeting clearances to go through. I just can't keep up."<br><br>
+                    I wasn't exactly sure how he wanted me to do this, it wasn't like I could get into his mind and sort all of the information.<br><br>
+                    He sees the confused expression on my face. "The memo-reciver has a port. Only the mechanics really know about it, it's for maintenance. I've gotten pretty close to them. If someone could access it during the information transfer cycle. If someone could sort the data that flows to me at night…"<br><br>
+                    I finally get it. This is my way in.<br><br>
+                    —-<br><br>I have a toolbox of wires and pins with me from my father, who is older than me. I wasn't entirely sure what to take with me when he died, so I tried to take the most useful items. I spent three hours adapting the cables with pins, trying to mould them to the receiver's port. Viktor came to check in on me every once in a while, but I gave him a death glare to leave me alone for a bit.<br><br>
+                    At 2 am, it finally activated.<br><br>I attached the memo-reciver to Viktors temple, a soft green glow under it, different from the original blue. Attached to it was a cable connected to my personal tablet.<br><br>
+                    All of the Data flooded into my device. It was a raw stream, even better for me as I'm used to this from the ministry. After it was all uploaded to my tablet, I left to work in the office. Inside were trade negotiations, updated security protocols, and meetings about what to do with the outer sectors.<br><br>
+                    One file stands out to me, it's titled "Reassignments."<br><br>Facility 21. Inmate 345 Status: Unchanged<br><br>Encryption Key: Active<br><br>
+                    User: Victor Kovac, Senior Commissioner Clearance Level 7<br><br>
+                    Authorization Required for Room Access<br><br>Corina is alive.<br><br>
+                    I continue to read the file.<br><br>Inmate 345 has tried to attack two guards. She has been left in confinement, at night when she believes she is not being watched, she draws sun-like symbols on the wall.<br><br>
+                    I copied all of the information into my file and then deleted all evidence that I had been anywhere near this information. I went back to lie next to my husband. It became 4 am. The apartment was silent, but my head was filled with thoughts.<br><br>
+                    Viktors hand found my own. He asked if I had gotten everything I needed. I had, and it was thanks to him.<br><br>
+                    "She's alive," I tell him. He turns to face me. He looks calm, and the shine of the drones patrolling the outside shines on his face.<br><br>
+                    "Then we get her out."<br><br>I don't know what I am to him. Does he see me as a wife, a friend, a responsibility? I don't really know, but for some reason, he doesn't see me as a traitor he should report. He would report me if he were the man I originally thought him to be, a man the First Director trained him to be. But he is not, he is a kind man, a man who walks me to hidden tunnels, a man who lets his wife mess with government property, a man who encourages breaking out your friend who is in prison for a crime against the government.<br><br>
+                    —----<br><br>Dear sisters,<br><br>If any of you are reading this. I have the new broadcast key.<br><br>
+                    It's not a password, it's Viktor. Using his memo-reciver, I can unlock the broadcast server for exactly 90 seconds before the system realizes there is unauthorized access.<br><br>
+                    90 seconds should be enough to get the message across to everyone. The issue is that Viktor has to physically be there. His face is necessary, and he has to enter the room without any signs of distress or heightened emotion, or the security algorithm will deny any access to the room.<br><br>
+                    This is his choice. I can't force him, even if I wanted to.<br><br>
+                    Today we had what could be our last "normal dinner." I looked at him, and he was calm and expressionless. He grabbed my hand and drew the shape of the sun on it. The symbol he learned more about for me.<br><br>
+                    I held onto his hand for the rest of the night. I wasn't able to fall asleep.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+// java
+let showingFirst = true;
+
+const mainImage = document.getElementById('mainImage');
+const captionText = document.getElementById('captionText');
+const leftDot = document.getElementById('leftDot');
+const rightDot = document.getElementById('rightDot');
+
+function updateDisplay() {
+    if (showingFirst) {
+        // gif
+        mainImage.src = '../images/B7I1.gif';
+        captionText.innerText = 'i wish i could sit by the non frozen seas from before';
+        
+        leftDot.style.background = '#861657';
+    
+        rightDot.style.background = 'white';
+    } else {
+        // image
+        mainImage.src = '../images/B7I2.png';
+        captionText.innerText = 'some of the code from messing with the memo-reciver';
+        
+        rightDot.style.background = '#861657';
+        
+        leftDot.style.background = 'white';
+    }
+}
+
+leftDot.addEventListener('click', function() {
+    if (!showingFirst) {
+        showingFirst = true;
+        updateDisplay();
+    }
+});
+
+rightDot.addEventListener('click', function() {
+    if (showingFirst) {
+        showingFirst = false;
+        updateDisplay();
+    }
+});
+
+document.getElementById('backBtn').addEventListener('click', function() {
+    window.location.href = '../homepage.html';
+});
+
+updateDisplay();
+</script>
+
+</body>
+</html>

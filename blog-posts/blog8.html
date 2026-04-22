@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Summer – Copii Sub Soare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<div class="main">
+    
+    <div class="back-btn" id="backBtn">
+        <img src="../redbutton.svg" alt="exit archive">
+    </div>
+
+    <div class="blog-container">
+         <!-- holds the image  -->
+        <div class="left-panel">
+            <img src="../images/B8I1.png" class="main-image" id="mainImage">
+             <!-- first caption -->
+            <div class="caption-bg"></div>
+            <div class="caption-text" id="captionText">at times like this I miss my mother but she has no face</div>
+            
+            <div class="toggle">
+                <div class="dot" id="leftDot"></div>
+                <div class="dot" id="rightDot"></div>
+            </div>
+        </div>
+         <!-- right panel info -->
+        <div class="right-panel">
+            <div class="title"> The First Director</div>
+            <div class="date">20 - 06 - 11 P.F</div>
+            <div class="number">02938475902</div>
+            <div class="text-box">
+                <div class="text">
+                    I'm on the run.<br><br>
+                    My hands are shaking. I don't know how much time I have. But I want to record what happened so you all know the truth. To know what happens if I end up in a cell or worse.<br><br>
+                    The server room is in a former cathedral, a true ministry of data. Racks upon racks of petrol crystals pulse their teal hue on the walls. Security lines the halls, both in the cameras and in the guards. At the altar is a single console, a single chair, the chair Corina used.<br><br>
+                    I felt her there, I felt a woman who risked her "perfect" life for everyone else. She walked into that room and spread the gospel until they crucified her.<br><br>Now it was my turn.<br><br>
+                    Viktor walked towards the door to the broadcasting room, and I stood a ways back. He stood in front of the biometric reader. He was calm, not even the slightest notion of stress. I prayed the entire time his stress levels would be under 10%, that's all I could hope for.<br><br>
+                    The encryption began to work, and the doors opened. I began to walk towards them, but then, it was him.<br><br>
+                    He was taller than on the broadcast. His body wasn't made of flesh and bones, but rather porcelain smooth surfaces and joints that moved with impossible precision. Only his heart, which was covered in layers of glass, was still his, the only human thing left ironically. His face is permanently stuck at age 50.<br><br>It was The First Director.<br><br>
+                    He didn't say anything at first. No threats, no yelling. He was honestly expressionless. His head tilted, and he said, "You served me well, whether you wanted to or not."<br><br>
+                    He knew. He knew we were coming. He knew Corina would come. The miners were killed because they threatened the regime, they were killed because they didn't matter in the long run. They were a message not to be inspired by a dead woman's words.<br><br>
+                    "You're not the first to come here. And it's likely you won't be the last."<br><br>He didn't seem worried about us at all. It made me so mad.<br><br>
+                    "Do you really think information does anything? Does a society in the light improve, or does the information simply overpower the mind? If not me, then who? Information is a commodity, and its shelf life is for you, unfortunately, short."<br><br>
+                    He looked toward the broadcasting screen.<br><br>
+                    "In five years, the people of Zimnygrad will have new issues, new problems with their lives. They couldn't care less about your broadcast, and in 20 years, they will deny that any of it was ever true. It's a cycle, it happens across decades, across centuries, and this will be no different. The truth is tiring."<br><br>
+                    His eyes had a tired expression to them.<br><br>
+                    "I'm not a monster, Irina. You might think I am, but the Freeze was necessary. It was for the community, it was, it is, for the people. The old world was dying, and all I did was speed up the process so something new could grow out of it. You may not like it, but it cannot be undone."<br><br>
+                    ——<br><br>He offered us a choice.<br><br>Viktor could return to his normal life. His position, security apartment, and life would all be preserved. We would say that we had a falling out, and I would return to my work in Sector 2. We would never see each other again, but we would survive. Our minds were too powerful for The Director to lose us now.<br><br>Or<br><br>
+                    We could upload our broadcast, show the entire nation the truth on camera. And we could learn how he became this way.<br><br>
+                    The Director was not threatening, he was more curious than anything.<br><br>
+                    Viktor looked at me, and I looked at the key.<br><br>My hand moved.<br><br>I pressed it.<br><br>The broadcast began.<br><br>———<br><br>
+                    Everything that happened next was a blur. Viktor grabbed my hand, and we ran out. I took one last look at the Director, who simply stood there watching the broadcast. I remember alarms going off, I remember lights flashing. And I remember being incredibly out of breath.<br><br>
+                    Viktor pulled me through various corridors that I had never seen before and then through a tunnel that had never been documented on any map. He always had a plan. He could tell that I was utterly surprised.<br><br>
+                    "I've been mapping escape routes for months, just in case."<br><br>
+                    As we made it through the transit tunnels, we could hear and see the broadcast in the sky through the windows. Videos of the files of Project Eternal Winter, Corina's speech, and the fifty miners. Everyone in the nation was watching.<br><br>
+                    Finally, the truth is out.<br><br>For now, Viktor and I are alive. I don't know what will become of us, but I do know that the truth was alive. Even if it was just for a short time, no one could look away.<br><br>
+                    Now it is our turn again, sisters, to see what can come from this.
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+// Java file
+let showingFirst = true;
+
+const mainImage = document.getElementById('mainImage');
+const captionText = document.getElementById('captionText');
+const leftDot = document.getElementById('leftDot');
+const rightDot = document.getElementById('rightDot');
+
+
+//update based on the images and text
+function updateDisplay() {
+    if (showingFirst) {
+        mainImage.src = '../images/B8I1.png';
+        captionText.innerText = 'at times like this I miss my mother but she has no face';
+        leftDot.style.background = '#861657';
+        rightDot.style.background = 'white';
+    } else {
+        mainImage.src = '../images/B8I2.png';
+        captionText.innerText = 'the walls to the server room were beautiful, a pity';
+        rightDot.style.background = '#861657';
+        leftDot.style.background = 'white';
+    }
+}
+
+leftDot.addEventListener('click', function() {
+    if (!showingFirst) {
+        showingFirst = true;
+        updateDisplay();
+    }
+});
+
+rightDot.addEventListener('click', function() {
+    if (showingFirst) {
+        showingFirst = false;
+        updateDisplay();
+    }
+});
+
+document.getElementById('backBtn').addEventListener('click', function() {
+    window.location.href = '../homepage.html';
+});
+
+updateDisplay();
+</script>
+
+</body>
+</html>

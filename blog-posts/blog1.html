@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Beginnings – Copii Sub Soare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+<div class="main">
+    
+    <div class="back-btn" id="backBtn">
+        <img src="../redbutton.svg" alt="exit archive">
+    </div>
+
+    <div class="blog-container">
+         <!-- holds the image  -->
+        <div class="left-panel">
+            <img src="../images/B1I1.png" class="main-image" id="mainImage">
+            
+            <!-- vidoe over the eyes -->
+            <div class="eye-video" id="videoOverlay">
+                <video autoplay loop muted playsinline>
+                    <source src="../images/videoovereye.mp4" type="video/mp4">
+                </video>
+            </div>
+             <!-- first caption -->
+            <div class="caption-bg"></div>
+            <div class="caption-text" id="captionText">too bad I had to go back to my natural after marrying Viktor</div>
+            
+            <div class="toggle">
+                <div class="dot" id="leftDot"></div>
+                <div class="dot" id="rightDot"></div>
+            </div>
+        </div>
+        <!-- right panel info -->
+        <div class="right-panel">
+            <div class="title">New Beginnings</div>
+            <div class="date">14/03/10 PF (post freeze)</div>
+            <div class="number">83824720482</div>
+            <div class="text-box">
+                <div class="text">
+                    Hello<br><br>
+                    I'm not sure how many of you will ever see this message, and I don't even know who "you" are meant to be. No official names have been given to me, but I was told this channel was secure, and for now, I choose to believe that. This is both my record and my only connection to "you."<br><br>
+                    I may not have much control, but this is the only way I can help us all. I'm hoping that by writing down my experiences, we can all feel some sense of normalcy.<br><br>
+                    I'm Irina. As of the 20th of January, I am 23. I live in Bloc 3, Sector 1 of Zimnygrad. If you know where this is, then you know it is not easy to get. I live in the apartment of generals' medal-winning soldiers, businessmen, and scientists. The rooms in Block 3 are kept much warmer than other homes you'll find in the outer sectors of Zimnygrad. We can see out, but no one can see in. My windows don't open, a dizzying plunge down, and I see the canyons of snow that cover what is left of older homes. I am told this home is a privilege, but it feels more like a quiet cage.<br><br>
+                    I did not earn this. I was chosen for it. The same way that I was chosen for him.<br><br>
+                    Three months ago, I was a Senior Archivist in Sector 2, located an hour from Sector 1 by subteran. It's an uncommon rank for people my age, but not unheard of for those with… certain legacies. My Father is dead, and I have never known a mother. Before his death, he was an Archivist long before the Freeze and taught me everything he knew. I am his daughter, and I've inherited more than his mind. I was, and still am, quite the catch. A young, Senior Archivist with a clean record and, most conveniently, unwed.<br><br>
+                    An unmarried woman of my rank and age is not just unusual, it's an anomaly, and the Republic does not like anomalies. With Decree 770.2, the family unit is more and more encouraged, though how many of those children would survive is another story.<br><br>
+                    My husband Viktor is a Senior Commissioner. Similar to me in many ways, he gained this role through years of training, coming from a line of supporters of the regime long before the Freeze even began. As his position is front and center, he needs a wife, not for children, but for stability, for optics. He needs someone to host dinner parties for delegates, to stand by his side at speeches, to be living proof that the system Zimnygrad runs works. Loyalty comes with rewards. I guess I'm the prize.<br><br>
+                    This move does come with its benefits. I no longer live in a cramped apartment with my older, unhappy roommates, breathing in dry recycled air. From an overworked border facility, I have been transferred to the clean, quiet, and unsupervised Ministry of Data.<br><br>
+                    It may be quiet here, but I am determined to learn more.<br><br>
+                    For your records:<br><br>
+                    In Sector 12, there are a reported 51,312 residences, with each family allocated one. In the official report from Zimnygrad, all families under the regime have been given a home.<br><br>
+                    According to the Infrastructure log, however, only 40,312 petrol crystal heaters (PTH) have been built within the city, leaving 11,000 residences with no proper heating.<br><br>
+                    Without a PTH, the interior temperature matches the exterior. Maximum survival time is two hours. We can only hope others in the Sector have been kind enough to take them in. Kindness is in short supply nowadays.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Java file
+let showingFirst = true;
+
+const mainImage = document.getElementById('mainImage');
+const captionText = document.getElementById('captionText');
+const leftDot = document.getElementById('leftDot');
+const rightDot = document.getElementById('rightDot');
+//unique to blog 1
+const videoOverlay = document.getElementById('videoOverlay'); 
+
+//update based on the images and text
+function updateDisplay() {
+    if (showingFirst) {
+        mainImage.src = '../images/B1I1.png';
+        captionText.innerText = 'too bad I had to go back to my natural after marrying Viktor';
+        leftDot.style.background = '#861657';
+        rightDot.style.background = 'white';
+        if (videoOverlay) {
+            videoOverlay.style.display = 'block';
+        }
+    } else {
+        mainImage.src = '../images/B1I2.png';
+        captionText.innerText = 'the freeze remembers what the thaw tries to erase — Irina, 10 P.F.';
+        rightDot.style.background = '#861657';
+        leftDot.style.background = 'white';
+        if (videoOverlay) {
+            videoOverlay.style.display = 'none';
+        }
+    }
+}
+
+leftDot.addEventListener('click', function() {
+    if (!showingFirst) {
+        showingFirst = true;
+        updateDisplay();
+    }
+});
+
+rightDot.addEventListener('click', function() {
+    if (showingFirst) {
+        showingFirst = false;
+        updateDisplay();
+    }
+});
+
+document.getElementById('backBtn').addEventListener('click', function() {
+    window.location.href = '../homepage.html';
+});
+
+updateDisplay();
+</script>
+
+</body>
+</html>
